@@ -15,13 +15,13 @@ function App() {
 
   const iniciar = async () => {
     if (!entrada) return alert('Digite uma entrada válida!');
-    await printHitsAndFaults(entrada, buffer);
+    const pagesRequested = entrada.split(" ");
+    await searchPages(pagesRequested, buffer);
   };
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   const clockPageChange = async (page, buffer) => {
-    console.log(buffer);
     while (true) {
       await sleep(500);
       if (buffer[pointer][0] === -1 || buffer[pointer][0] === 0) {
@@ -40,9 +40,7 @@ function App() {
     }
   };
 
-  const printHitsAndFaults = async (reference_string, buffer) => {
-    const pagesRequested = reference_string.split(" ");
-
+  const searchPages = async (pagesRequested, buffer) => {
     for (const page of pagesRequested) {
       const pageFounded = buffer.find((bufferPage) => bufferPage[1] === page);
       if (!pageFounded) {
@@ -50,7 +48,7 @@ function App() {
         await clockPageChange(page, buffer);
       }
     }
-    console.log("Quantidade de page fault que ocorreu: ", pageFaultCount);
+    console.log("Quantidade de page faults que ocorreram: ", pageFaultCount);
   };
 
   return (
