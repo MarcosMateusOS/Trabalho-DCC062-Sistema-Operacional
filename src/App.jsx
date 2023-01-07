@@ -14,6 +14,7 @@ function App() {
   const buffer = new Array(12).fill([-1, undefined]);
 
   const iniciar = async () => {
+    if (!entrada) return alert('Digite uma entrada válida!');
     await printHitsAndFaults(entrada, buffer);
   };
 
