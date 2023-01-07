@@ -1,0 +1,251 @@
+#root {
+  max-width: 1280px;
+  padding: 1rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgb(248, 248, 247);
+  -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+.analogicClock {
+  font-size: 2rem;
+  display: flex;
+  min-height: 10vh;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.big-circle {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgb(3, 0, 49);
+  position: relative;
+}
+
+.big-circle .marking {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #1df52f;
+  z-index: 0;
+  left: 49%;
+}
+
+.big-circle .marking {
+  background: white;
+  width: 3px;
+}
+
+.big-circle .marking.marking-one {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.big-circle .marking.marking-two {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.big-circle .marking.marking-three {
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.big-circle .marking.marking-four {
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.big-circle .marking.marking-five {
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.big-circle .marking.marking-six {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.big-circle .marking.marking-seven {
+  -webkit-transform: rotate(210deg);
+  -moz-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+
+.big-circle .marking.marking-eight {
+  -webkit-transform: rotate(240deg);
+  -moz-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+
+.big-circle .marking.marking-nine {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.big-circle .marking.marking-ten {
+  -webkit-transform: rotate(300deg);
+  -moz-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.big-circle .marking.marking-eleven {
+  -webkit-transform: rotate(330deg);
+  -moz-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+
+.big-circle .marking.marking-twelve {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.inner-clock-face {
+  position: absolute;
+  top: 7.5%;
+  left: 7.5%;
+  width: 85%;
+  height: 85%;
+  background: #000000;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.inner-clock-face::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50.6%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  margin-left: -9px;
+  margin-top: -6px;
+  background: #4d4b63;
+  z-index: 11;
+}
+
+.outer-clock-face {
+  position: relative;
+  background: #282828;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgb(3, 0, 49);
+  position: relative;
+  border: 4px solid rgb(0, 0, 0);
+}
+
+.hand {
+  width: 50%;
+  right: 50%;
+  height: 4px;
+  background: #ee791a;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.circle-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(75% - 63px);
+  left: calc(50% - 27px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: black;
+}
+
+.circle-item-1 {
+  transform: rotate(90deg) translate(-175%, 0%) rotate(-90deg);
+}
+
+.circle-item-2 {
+  transform: rotate(120deg) translate(-175%, 0%) rotate(-120deg);
+}
+
+.circle-item-3 {
+  transform: rotate(150deg) translate(-175%, 0%) rotate(-150deg);
+}
+
+.circle-item-4 {
+  transform: rotate(180deg) translate(-175%, 0%) rotate(-180deg);
+}
+
+.circle-item-5 {
+  transform: rotate(210deg) translate(-175%, 0%) rotate(-210deg);
+}
+
+.circle-item-6 {
+  transform: rotate(240deg) translate(-175%, 0%) rotate(-240deg);
+}
+
+.circle-item-7 {
+  transform: rotate(270deg) translate(-175%, 0%) rotate(-270deg);
+}
+
+.circle-item-8 {
+  transform: rotate(300deg) translate(-175%, 0%) rotate(-300deg);
+}
+
+.circle-item-9 {
+  transform: rotate(330deg) translate(-175%, 0%) rotate(-330deg);
+}
+
+.circle-item-10 {
+  transform: rotate(360deg) translate(-175%, 0%) rotate(-360deg);
+}
+
+.circle-item-11 {
+  transform: rotate(30deg) translate(-175%, 0%) rotate(-30deg);
+}
+
+.circle-item-12 {
+  transform: rotate(60deg) translate(-175%, 0%) rotate(-60deg);
+}
